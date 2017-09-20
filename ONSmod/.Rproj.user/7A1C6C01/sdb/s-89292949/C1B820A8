@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shiny)\nlibrary(shinydashboard)\nlibrary(fmsb)\n\nshinyUI(fluidPage(\n  \n  #tags$head(includeScript(\"bugherd.js\"),tags$link(rel=\"shortcut icon\",href=\"favicon.ico\")),\n  #titlePanel(\"Hello World\"),\n  \n  #titlePanel(\"Hello World\"),\n  tags$img(src=\"ons-logo.png\", width=180),\n  #tags$div(),\n  tags$h1(\"Material Properties of Data\"),\n  \n# Define UI for slider demo application\nshinyUI(pageWithSidebar(\n  \n  #  Application title\n  tags$head(includeScript(\"bugherd.js\"),tags$link(rel=\"shortcut icon\",href=\"favicon.ico\")),\n\n  # Sidebar with sliders that demonstrate various available options\n  sidebarPanel(\n    \n    selectInput(\"sensitivity\", \"Sensitivity:\", \n                list(\"Open Public\"=0,\"Commercial\"=4,\"Private Personal\"=8, \"Secret\"=12)),\n    div(p(actionLink(\"showsensitivity\", \"\", icon=(icon(\"question-circle\", class = NULL, lib = \"font-awesome\"))),align=\"right\",color=\"blue\")),\n    \n    selectInput(\"indentifies\", \"Identifies:\", \n                list(\"Non Personal\"=0,\"Groups\"=6,\"Individuals\"=12)),  \n    div(p(actionLink(\"showindentifies\", \"\", icon=(icon(\"question-circle\", class = NULL, lib = \"font-awesome\"))),align=\"right\",color=\"red\")),\n    \n    selectInput(\"granularity\", \"Granularity:\",\n                list(\"Population\"=0,\"Sample\"=4,\"Record\"=8, \"Field Variable\"=12)),\n    div(p(actionLink(\"showgranularity\", \"\", icon=(icon(\"question-circle\", class = NULL, lib = \"font-awesome\"))),align=\"right\")),\n    \n    selectInput(\"recency\", \"Recency:\",\n                list(\"Historical\"=0,\"Periodic\"=6,\"Real-time\"=12)),   \n    div(p(actionLink(\"showrecency\", \"\", icon=(icon(\"question-circle\", class = NULL, lib = \"font-awesome\"))),align=\"right\")),\n    \n    selectInput(\"reliability\", \"Reliability:\",\n                list(\"Incomplete\"=0,\"Patchy\"=4,\"Substantial\"=8, \"Complete\"=12)),  \n    div(p(actionLink(\"showreliability\", \"\", icon=(icon(\"question-circle\", class = NULL, lib = \"font-awesome\"))),align=\"right\")),\n    \n    selectInput(\"release\", \"Release:\",\n                list(\"Closed\"=0,\"Restricted\"=6,\"Open\"=12)),                              \n    div(p(actionLink(\"showrelease\", \"\", icon=(icon(\"question-circle\", class = NULL, lib = \"font-awesome\"))),align=\"right\")),\n    \n    selectInput(\"audience\", \"Audience:\",\n                list(\"Named\"=0,\"Closed Group\"=4,\"Third Parties by type\"=8, \"Public\"=12)),\n    div(p(actionLink(\"showaudience\", \"\", icon=(icon(\"question-circle\", class = NULL, lib = \"font-awesome\"))),align=\"right\",color=\"blue\"))\n    \n               \n  ),\n  \n  mainPanel(\n    plotOutput('radarPlot',height=\"800px\", width=\"800px\")\n    )\n  )\n)\n)\n)",
+    "created" : 1496971497168.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3309201124",
+    "id" : "C1B820A8",
+    "lastKnownWriteTime" : 1497002811,
+    "last_content_update" : 1497002811106,
+    "path" : "C:/Tools/R/ONSmod/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
